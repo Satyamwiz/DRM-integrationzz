@@ -28,13 +28,22 @@ function App() {
     const style = document.createElement('style');
     style.textContent = `
       video::-internal-media-controls-overlay-cast-button {
-        display: none;
+      display: none;
       }
       video::-webkit-media-controls {
-        display: none !important;
+      display: none !important;
       }
       video {
-        -webkit-filter: none !important;
+      -webkit-filter: none !important;
+      }
+      body::after {
+      content: "LMFAOOO KYA LAGA HOGLE";
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      color: red;
+      font-size: 20px;
+      z-index: 9999;
       }
     `;
     document.head.appendChild(style);
